@@ -1,0 +1,22 @@
+
+
+
+
+.canvasCursor {
+  position: relative;
+  left: 0%;
+  pointer-events: none;
+
+
+
+}
+.outside{
+
+  position: fixed;
+  pointer-events: none;
+
+
+z-index: -10;
+
+
+}

@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+
+import appStyle from './App.css';
+import React, {useState } from "react";
+import CursorAnimTrail from './components/CursorAnimTrail';
+
+
+
 
 function App() {
+
+  const [particleType, setType] = useState("firefly");
+
+  //console.log(particleType);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+ <div>
+    {/*<div className="nav">
+    <div className="navitem" onClick={() =>setType("firefly")}>Firefly Style</div>
+    <div className="navitem" onClick={() =>setType("bigandclose")}>Trail Style</div>
+    </div>*/}
+
+    <CursorAnimTrail
+      particleType={particleType}
+    />
+     </div>
+
   );
 }
 
